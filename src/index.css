@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "solaiman";
+  src: url("./fonts/SolaimanLipi.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@layer base {
+  body {
+    @apply font-solaiman font-normal relative;
+  }
+}
