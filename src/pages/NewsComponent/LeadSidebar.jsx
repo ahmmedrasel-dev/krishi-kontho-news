@@ -18,7 +18,7 @@ const LeadSidebar = () => {
     // Add more videos as needed
   ];
   return (
-    <div className="bg-white border rounded p-2 w-80">
+    <div className="bg-white border rounded p-2 w-[308px]">
       <h3 className="text-md font-semibold mb-4">
         <FaVideo className="inline-block" /> ভিডিও
       </h3>

@@ -1,5 +1,7 @@
 import { React, useRef } from "react";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { FaChevronLeft, FaChevronRight, FaVideo } from "react-icons/fa";
+import { FiArrowRightCircle } from "react-icons/fi";
+import { Link } from "react-router-dom";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
@@ -12,6 +14,17 @@ const VideoGallerySection = () => {
   const nextRef = useRef(null);
   return (
     <section className="border rounded-sm p-2 my-5">
+      <div className="flex justify-between my-2">
+        <h4 className="text-2xl font-semibold">
+          <FaVideo className="inline-block mr-2" /> ভিডিও
+        </h4>
+        <Link
+          to={"/"}
+          className="text-2xl font-semibold hover:text-red-700 duration-300 ease-in-out"
+        >
+          সব ভিডিও <FiArrowRightCircle className="inline-block ml-2" />
+        </Link>
+      </div>
       <div className="relative">
         <Swiper
           navigation={{
