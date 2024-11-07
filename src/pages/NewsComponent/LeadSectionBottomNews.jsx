@@ -1,16 +1,15 @@
-import thumbnail1 from "../../assets/images/thumbnail_1.jpeg";
+import { getUrl } from "../../utills/utility";
 
-const LeadSectionBottomNews = () => {
+const LeadSectionBottomNews = ({ news }) => {
+  console.log(news);
   return (
     <div>
       <img
-        src={thumbnail1}
+        src={getUrl(news?.thumbnail)}
         alt="Sub Article"
         className="w-full h-24 object-cover rounded mb-2"
       />
-      <h3 className="text-md font-semibold">
-        ট্রাম্পকে অভিনন্দন জানিয়ে নেতানিয়াহুর বার্তা
-      </h3>
+      <h3 className="text-md font-semibold">{news?.title}</h3>
     </div>
   );
 };
