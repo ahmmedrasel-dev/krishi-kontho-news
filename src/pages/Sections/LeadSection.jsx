@@ -12,16 +12,17 @@ const LeadSection = () => {
   return (
     <section className="mt-4">
       <div className="grid grid-cols-1 desktop:grid-cols-4 gap-4">
-        <div className="desktop:col-span-2">
+        <div className="desktop:col-span-2 px-4 desktop:px-0">
           <LeadNews news={leadNews} />
+
           <div className="bg-white border rounded p-2 mt-2">
-            <div className=" grid grid-cols-3 space-x-4">
+            <div className="grid desktop:grid-cols-3 grid-cols-1 desktop:space-x-4 space-y-4 desktop:space-y-0">
               {allNews?.slice(1, 4).map((item) => (
                 <LeadSectionBottomNews key={item.id} news={item} />
               ))}
             </div>
             <div className="border-b my-6"></div>
-            <div className="grid grid-cols-3 space-x-4">
+            <div className="grid desktop:grid-cols-3 grid-cols-1 desktop:space-x-4 space-y-4 desktop:space-y-0">
               {allNews?.slice(4, 7).map((item) => (
                 <LeadSectionBottomNews key={item.id} news={item} />
               ))}
@@ -29,11 +30,11 @@ const LeadSection = () => {
           </div>
         </div>
 
-        <div className="desktop:col-span-1 grid gap-4">
+        <div className="grid grid-cols-1 gap-4 p-4 desktop:p-0">
           <LeadSectionRightNews />
         </div>
 
-        <div className="desktop:col-span-1 grid gap-4">
+        <div className="grid grid-cols-1 gap-4 p-4 desktop:p-0">
           <LeadSidebar />
         </div>
       </div>

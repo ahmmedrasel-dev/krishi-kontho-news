@@ -13,7 +13,7 @@ const Footer = () => {
             <p className="text-gray-500">
               ডেপুটি প্রধান সম্পাদক (অনলাইন): রাসেল আহমেদ
             </p>
-            <p>ভোরবেলা মিডিয়া লিমিটেড...</p>
+            <p>কৃষি কণ্ঠ মিডিয়া লিমিটেড...</p>
           </div>
           <div>
             <p>ফোন: +880 02 5566XXXX, +880 02 5566XXXX</p>
@@ -23,7 +23,7 @@ const Footer = () => {
                 href="mailto:news@vorbela.com"
                 className="text-blue-500 hover:underline"
               >
-                news@vorbela.com
+                news@krishikontho.com
               </a>
             </p>
           </div>
@@ -56,7 +56,7 @@ const Footer = () => {
           </div> */}
           <div className="flex flex-wrap justify-center md:justify-between space-x-4 text-sm">
             <a href="#" className="hover:underline">
-              ভোরবেলা
+              কৃষি কণ্ঠ
             </a>
             <a href="#" className="hover:underline">
               গোপনীয়তা নীতি
@@ -95,7 +95,7 @@ const Footer = () => {
       </div>
 
       <div className="bg-gray-200 text-gray-500 text-center py-2">
-        <p>&copy; ভোরবেলা মিডিয়া লিমিটেড ২০২8</p>
+        <p>&copy; কৃষি কণ্ঠ ২০২8</p>
         <p>ওয়েবসাইটের কোনো লেখা, ছবি, ভিডিও অনুমতি ছাড়া ব্যবহার বেআইনি।</p>
       </div>
     </footer>

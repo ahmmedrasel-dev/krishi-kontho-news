@@ -27,7 +27,7 @@ const VideoPlayer = ({ videos }) => {
         {videos.map((video, index) => (
           <SwiperSlide key={index}>
             <div>
-              <ReactPlayer url={video.url} width={320} height={400} />
+              <ReactPlayer url={video.url} height={400} />
             </div>
           </SwiperSlide>
         ))}

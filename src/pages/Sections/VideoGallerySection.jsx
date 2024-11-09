@@ -2,9 +2,9 @@ import { React, useRef } from "react";
 import { FaChevronLeft, FaChevronRight, FaVideo } from "react-icons/fa";
 import { FiArrowRightCircle } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import "swiper/css";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/swiper-bundle.css";
 import { getVideo } from "../../data/news";
 import Video from "../NewsComponent/Video";
 
@@ -37,8 +37,22 @@ const VideoGallerySection = () => {
             swiper.navigation.init();
             swiper.navigation.update();
           }}
+          spaceBetween={10}
+          breakpoints={{
+            430: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 20,
+            },
+          }}
           modules={[Navigation]}
-          slidesPerView={4}
           spaceBetween={20}
         >
           {videos.map((item) => (

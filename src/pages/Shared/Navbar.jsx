@@ -39,12 +39,6 @@ const Navbar = () => {
               <AiFillLike className="inline-block text-xl mr-2" />
               সোশ্যাল মিডিয়া
             </NavLink>
-            <NavLink
-              href="/"
-              className="hover:underline font-semibold text-navlink-color"
-            >
-              বাংলা কনভার্টার
-            </NavLink>
           </nav>
 
           <div className="justify-end desktop:hidden flex">
@@ -73,82 +67,43 @@ const Navbar = () => {
       {/* Main Navigation Section */}
       <div className="flex justify-center bg-white border-t shadow border-gray-200">
         <nav className="flex space-x-4 p-4 desktop:space-x-10 py-2 overflow-y-auto max-h-60 desktop:max-h-none">
-          <NavLink
-            href="/"
-            className="hover:underline font-semibold text-navlink-color"
-          >
+          <NavLink href="/" className="navbar font-semibold text-navlink-color">
             <FaHome className="text-xl" />
           </NavLink>
-          <NavLink
-            href="/"
-            className="hover:underline font-semibold text-navlink-color"
-          >
+          <NavLink href="/" className="navbar font-semibold text-navlink-color">
             সর্বশেষ
           </NavLink>
-          <NavLink
-            href="/"
-            className="hover:underline font-semibold text-navlink-color"
-          >
+          <NavLink href="/" className="navbar font-semibold text-navlink-color">
             জাতীয়
           </NavLink>
-          <NavLink
-            href="/"
-            className="hover:underline font-semibold text-navlink-color"
-          >
+          <NavLink href="/" className="navbar font-semibold text-navlink-color">
             রাজনীতি
           </NavLink>
-          <NavLink
-            href="/"
-            className="hover:underline font-semibold text-navlink-color"
-          >
+          <NavLink href="/" className="navbar font-semibold text-navlink-color">
             সারাদেশ
           </NavLink>
-          <NavLink
-            href="/"
-            className="hover:underline font-semibold text-navlink-color"
-          >
+          <NavLink href="/" className="navbar font-semibold text-navlink-color">
             বিশ্ব
           </NavLink>
-          <NavLink
-            href="/"
-            className="hover:underline font-semibold text-navlink-color"
-          >
+          <NavLink href="/" className="navbar font-semibold text-navlink-color">
             খেলা
           </NavLink>
-          <NavLink
-            href="/"
-            className="hover:underline font-semibold text-navlink-color"
-          >
+          <NavLink href="/" className="navbar font-semibold text-navlink-color">
             বিনোদন
           </NavLink>
-          <NavLink
-            href="/"
-            className="hover:underline font-semibold text-navlink-color"
-          >
+          <NavLink href="/" className="navbar font-semibold text-navlink-color">
             শিক্ষা
           </NavLink>
-          <NavLink
-            href="/"
-            className="hover:underline font-semibold text-navlink-color"
-          >
+          <NavLink href="/" className="navbar font-semibold text-navlink-color">
             বাণিজ্য
           </NavLink>
-          <NavLink
-            href="/"
-            className="hover:underline font-semibold text-navlink-color"
-          >
+          <NavLink href="/" className="navbar font-semibold text-navlink-color">
             স্বাস্থ্য
           </NavLink>
-          <NavLink
-            href="/"
-            className="hover:underline font-semibold text-navlink-color"
-          >
+          <NavLink href="/" className="navbar font-semibold text-navlink-color">
             তথ্য
           </NavLink>
-          <NavLink
-            href="/"
-            className="hover:underline font-semibold text-navlink-color"
-          >
+          <NavLink href="/" className="navbar font-semibold text-navlink-color">
             অভিজ্ঞতা
           </NavLink>
         </nav>
