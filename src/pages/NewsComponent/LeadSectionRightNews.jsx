@@ -16,7 +16,7 @@ const LeadSectionRightNews = () => {
           />
           <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-50 transition duration-150 hover:ease-in-out rounded"></div>
         </div>
-        <h3 className="text-md font-semibold hover:text-red-700 ease-in-out duration-300">
+        <h3 className="text-xl font-semibold hover:text-red-700 ease-in-out duration-300">
           {sectionMainNews.title}
         </h3>
       </Link>

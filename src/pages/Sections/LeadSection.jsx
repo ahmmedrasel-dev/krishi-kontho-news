@@ -17,14 +17,24 @@ const LeadSection = () => {
 
           <div className="bg-white border rounded p-2 mt-2">
             <div className="grid desktop:grid-cols-3 grid-cols-1 desktop:space-x-4 space-y-4 desktop:space-y-0">
-              {allNews?.slice(1, 4).map((item) => (
-                <LeadSectionBottomNews key={item.id} news={item} />
+              {allNews?.slice(1, 4).map((item, index) => (
+                <div
+                  key={item.id}
+                  className={`${index == 0 ? "" : "border-l pl-4"}`}
+                >
+                  <LeadSectionBottomNews news={item} />
+                </div>
               ))}
             </div>
-            <div className="border-b my-6"></div>
+            <div className="border-b my-4"></div>
             <div className="grid desktop:grid-cols-3 grid-cols-1 desktop:space-x-4 space-y-4 desktop:space-y-0">
-              {allNews?.slice(4, 7).map((item) => (
-                <LeadSectionBottomNews key={item.id} news={item} />
+              {allNews?.slice(4, 7).map((item, index) => (
+                <div
+                  key={item.id}
+                  className={`${index == 0 ? "" : "border-l pl-4"}`}
+                >
+                  <LeadSectionBottomNews news={item} />
+                </div>
               ))}
             </div>
           </div>
