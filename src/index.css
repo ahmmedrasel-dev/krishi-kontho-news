@@ -17,7 +17,9 @@
 
 /* Hover In Navbar */
 
-.navbar {
+.navbar,
+.selectedLatest,
+.selectedPopular {
   position: relative;
 }
 .navbar::before {
@@ -34,4 +36,15 @@
 
 .navbar:hover::before {
   transform: scaleX(1);
+}
+
+.selectedLatest::before,
+.selectedPopular::before {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  height: 4px;
+  background-color: currentColor;
+  width: 100%;
 }

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { FaCaretRight, FaCopy } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -17,6 +18,7 @@ import { getNews } from "../../data/news";
 import { getUrl } from "../../utills/utility";
 
 const SingleNews = () => {
+  const [isLatest, setIsLatest] = useState(false);
   const allNews = getNews();
   let url = "";
   let title = "";
@@ -130,19 +132,28 @@ const SingleNews = () => {
             </p>
           </div>
         </div>
-        <div>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi porro,
-          impedit et nobis expedita rem. Fuga molestias praesentium, ab
-          voluptatem veniam qui, culpa illum sed optio quae impedit nisi, labore
-          cupiditate aliquid nesciunt quis. Laborum veritatis ducimus
-          voluptates, unde nisi, impedit eum ex reprehenderit voluptatum enim
-          ut. Nesciunt nobis laudantium suscipit dolorum, est architecto nihil
-          quis rerum. Quasi, ipsa adipisci. Laudantium doloremque odio libero
-          ducimus, officia, debitis itaque magnam repudiandae molestias nam
-          placeat quaerat, deleniti adipisci? Ut voluptatibus impedit sapiente
-          minima atque fuga nisi exercitationem, magnam perferendis velit natus
-          incidunt placeat facilis assumenda accusamus quibusdam doloremque
-          fugiat alias eius quae?
+
+        <div className="grid grid-cols-1 border p-2 rounded">
+          <div>
+            <ul className="flex gap-6 border-b border-gray-300 px-2">
+              <li
+                className={`${
+                  isLatest ? "selectedLatest" : ""
+                } font-semibold cursor-pointer`}
+                onClick={() => setIsLatest(true)}
+              >
+                সর্বশেষ নিউজ
+              </li>
+              <li
+                className={`${
+                  !isLatest ? "selectedPopular" : ""
+                } font-semibold cursor-pointer`}
+                onClick={() => setIsLatest(false)}
+              >
+                জনপ্রিয় নিউজ
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
