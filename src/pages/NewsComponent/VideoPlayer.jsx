@@ -1,13 +1,28 @@
-import React, { useRef } from "react";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import ReactPlayer from "react-player";
+import GLightbox from "glightbox";
+import "glightbox/dist/css/glightbox.css";
+import React, { useEffect, useRef } from "react";
+import { FaChevronLeft, FaChevronRight, FaPlayCircle } from "react-icons/fa";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
-
-const VideoPlayer = ({ videos }) => {
+import { getVideo } from "../../data/news";
+import { getUrl } from "../../utills/utility";
+const VideoPlayer = () => {
+  const videos = getVideo();
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+
+  useEffect(() => {
+    const lightbox = GLightbox({
+      touchNavigation: true,
+      loop: true,
+      autoplayVideos: true,
+    });
+
+    return () => {
+      lightbox.destroy();
+    };
+  }, []);
   return (
     <div className="relative">
       <Swiper
@@ -24,11 +39,29 @@ const VideoPlayer = ({ videos }) => {
         modules={[Navigation]}
         slidesPerView={1}
       >
-        {videos.map((video, index) => (
+        {videos.map((item, index) => (
           <SwiperSlide key={index}>
-            <div>
+            <a
+              key={item.id}
+              href={item.videoUrl}
+              className="glightbox"
+              data-gallery="gallery"
+            >
+              <div className="relative overflow-hidden">
+                <img
+                  src={getUrl(item.thumbnail)}
+                  alt={item.title}
+                  className="transition-transform duration-300 ease-in-out transform hover:scale-105 hover:opacity-90"
+                />
+                <FaPlayCircle className="absolute inset-0 m-auto text-white text-4xl opacity-80 hover:opacity-100 transition-opacity duration-300" />
+              </div>
+              <h4 className="text-xl text-title-color font-semibold mt-2">
+                {item.title}
+              </h4>
+            </a>
+            {/* <div>
               <ReactPlayer url={video.url} height={400} />
-            </div>
+            </div> */}
           </SwiperSlide>
         ))}
       </Swiper>

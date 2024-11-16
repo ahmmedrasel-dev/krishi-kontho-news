@@ -21,7 +21,7 @@ const LeadSectionRightNews = () => {
         </h3>
       </Link>
 
-      {allNews.slice(5, 10).map((item) => (
+      {allNews.slice(5, 9).map((item) => (
         <Link to={`/news/${item.id}`} key={item.id}>
           <div className="border-b my-3"></div>
           <div className="flex space-x-3">
