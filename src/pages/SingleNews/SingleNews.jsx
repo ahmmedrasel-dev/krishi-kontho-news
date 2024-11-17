@@ -40,18 +40,18 @@ const SingleNews = () => {
 
   return (
     <section className="container my-4">
-      <div className="grid grid-cols-5 space-x-3">
+      <div className="grid desktop:grid-cols-5 grid-cols-1 space-x-3">
         <div className="">
-          <div className="mb-4">
-            <Breadcrum />
+          <div className="mb-4 ml-3 desktop:ml-0">
+            <Breadcrum news={currentNews} />
           </div>
-          <div className="border-y py-4 mb-4">
+          <div className="border-y py-4 mb-4 hidden desktop:block">
             <h3 className="text-lg text-title-color font-semibold">
               <FaCaretRight className="inline-block" /> এ সম্পর্কিত আরও খবর
             </h3>
           </div>
           {/* Category News */}
-          <div className="grid grid-cols-1 border rounded p-2">
+          <div className="hidden desktop:grid grid-cols-1 border rounded p-2">
             {allNews.slice(5, 9).map((item, index) => (
               <Link to={`/news/${item.id}`} key={item.id}>
                 <div className={`${index === 0 ? "" : "border-b"} my-3`}></div>
