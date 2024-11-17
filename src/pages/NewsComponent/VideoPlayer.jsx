@@ -68,15 +68,15 @@ const VideoPlayer = () => {
 
       <button
         ref={prevRef}
-        className="absolute top-1/2 left-0 transform -translate-y-1/2 z-10 p-2 text-white bg-slate-700 rounded-full"
+        className="absolute top-1/2 left-0 transform -translate-y-1/2 z-10 p-2 text-white bg-slate-500 rounded-full"
       >
-        <FaChevronLeft size={24} />
+        <FaChevronLeft size={18} />
       </button>
       <button
         ref={nextRef}
-        className="absolute top-1/2 right-0 transform -translate-y-1/2 z-10 p-2 text-white bg-slate-700 rounded-full"
+        className="absolute top-1/2 right-0 transform -translate-y-1/2 z-10 p-2 text-white bg-slate-500 rounded-full"
       >
-        <FaChevronRight size={24} />
+        <FaChevronRight size={18} />
       </button>
     </div>
   );
