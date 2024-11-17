@@ -56,7 +56,6 @@ const VideoGallerySection = () => {
             swiper.navigation.init();
             swiper.navigation.update();
           }}
-          spaceBetween={10}
           breakpoints={{
             430: {
               slidesPerView: 1,
