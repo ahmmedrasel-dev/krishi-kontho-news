@@ -81,15 +81,15 @@ const NationalSection = () => {
         <div className="border p-2 rounded-sm">
           <h4 className="text-xl font-semibold mb-4">আমার এলাকার সংবাদ</h4>
 
-          <div class=" p-5 bg-gray-100 border border-gray-300 rounded-lg shadow-md">
-            <form class="space-y-4">
-              <select class="w-full p-3 text-base text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+          <div className=" p-5 bg-gray-100 border border-gray-300 rounded-lg shadow-md">
+            <form className="space-y-4">
+              <select className="w-full p-3 text-base text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
                 <option value="">বিভাগ</option>
               </select>
-              <select class="w-full p-3 text-base text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+              <select className="w-full p-3 text-base text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
                 <option value="">জেলা</option>
               </select>
-              <select class="w-full p-3 text-base text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+              <select className="w-full p-3 text-base text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
                 <option value="">উপজেলা</option>
               </select>
             </form>
