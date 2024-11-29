@@ -7,16 +7,21 @@ const convertNumberToBangla = (number) => {
   return number
     .toString()
     .split("")
-    .map((digit) =>
-      /\d/.test(digit) ? banglaDigits[parseInt(digit, 10)] : digit
-    )
+    .map((digit) => (isNaN(digit) ? digit : banglaDigits[digit]))
     .join("");
 };
 
 const convertDateTimeToBangla = (dateTimeString) => {
-  const [datePart, timePart] = dateTimeString.split(" ");
-  const [year, month, day] = datePart.split("-");
-  let [hours, minutes, seconds] = timePart.split(":");
+  // Parse the ISO date-time string
+  const date = new Date(dateTimeString);
+
+  // Extract components
+  const year = date.getUTCFullYear();
+  const month = date.getUTCMonth(); // Month is 0-based
+  const day = date.getUTCDate();
+  let hours = date.getUTCHours();
+  const minutes = date.getUTCMinutes();
+  const seconds = date.getUTCSeconds();
 
   const banglaMonths = [
     "জানুয়ারি",
@@ -33,12 +38,13 @@ const convertDateTimeToBangla = (dateTimeString) => {
     "ডিসেম্বর",
   ];
 
-  const period = hours >= 12 ? "এএম" : "পিএম";
+  // Determine AM/PM and adjust hours
+  const period = hours >= 12 ? "পিএম" : "এএম";
   hours = hours % 12 || 12;
 
   // Convert components to Bangla
   const banglaYear = convertNumberToBangla(year);
-  const banglaMonth = banglaMonths[parseInt(month, 10) - 1];
+  const banglaMonth = banglaMonths[month];
   const banglaDay = convertNumberToBangla(day);
   const banglaHours = convertNumberToBangla(hours);
   const banglaMinutes = convertNumberToBangla(minutes);

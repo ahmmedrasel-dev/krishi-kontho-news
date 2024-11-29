@@ -21,7 +21,7 @@ const LeadNews = ({ leadNews }) => {
             {leadNews?.title}
           </h2>
           <p className="mt-2 text-summary-color">
-            {leadNews?.content?.slice(0, 140)}
+            {`${leadNews?.content?.slice(3, 145)}...`}
           </p>
         </div>
       </Link>

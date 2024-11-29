@@ -9,21 +9,23 @@ const Footer = () => {
         </p>
         <div className="md:flex md:justify-between text-center md:text-left">
           <div>
-            <p className="font-semibold">সম্পাদক ও প্রকাশক: আশিকুর রাহমান</p>
-            <p className="text-gray-500">
-              ডেপুটি প্রধান সম্পাদক (অনলাইন): রাসেল আহমেদ
+            <p className="font-semibold">
+              সম্পাদক ও প্রকাশক: আবু মনি জুবায়েদ রিপন
+            </p>
+            <p className="text-gray-500 font-semibold">
+              ভারপ্রাপ্ত সম্পাদক: আবু মনি সাকলায়েন এলিন
             </p>
             <p>কৃষি কণ্ঠ মিডিয়া লিমিটেড...</p>
           </div>
           <div>
-            <p>ফোন: +880 02 5566XXXX, +880 02 5566XXXX</p>
+            <p>ফোন: +8801712215219</p>
             <p>
               ই-মেইল:{" "}
               <a
-                href="mailto:news@vorbela.com"
+                href="mailto:krishikhantho@gmail.com"
                 className="text-blue-500 hover:underline"
               >
-                news@krishikontho.com
+                krishikhantho@gmail.com
               </a>
             </p>
           </div>
@@ -50,10 +52,6 @@ const Footer = () => {
             </a>
           </div>
 
-          {/* <div className="mt-4 md:mt-0">
-            <p className="font-semibold">নিউজলেটার</p>
-            <p>কালবেলা থেকে প্রতিদিন মেইলে আপডেট পেতে সাবস্ক্রাইব করুন।</p>
-          </div> */}
           <div className="flex flex-wrap justify-center md:justify-between space-x-4 text-sm">
             <a href="#" className="hover:underline">
               কৃষি কণ্ঠ
