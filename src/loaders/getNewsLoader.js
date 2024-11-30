@@ -4,12 +4,12 @@ export async function getNewsLoader() {
   try {
     // Fetch featured news
     const { data: featuredNews } = await axiosPrivate.get(
-      "https://krishiserver.krishikantho.com/api/featured_news"
+      `${import.meta.env.VITE_SERVER_URL}/featured_news`
     );
 
     // Fetch lead section news
     const { data: leadSecNews } = await axiosPrivate.get(
-      "https://krishiserver.krishikantho.com/api/lead_section_news"
+      `${import.meta.env.VITE_SERVER_URL}/lead_section_news`
     );
 
     return { featuredNews, leadSecNews };

@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { convertDateTimeToBangla } from "../utills/utility";
 
 const Breadcrum = ({ news }) => {
-  console.log(news?.created_at);
   return (
     <>
       <div className="flex items-center gap-2 mb-2">
@@ -16,7 +15,7 @@ const Breadcrum = ({ news }) => {
       <div className="flex items-center gap-2 mb-2">
         <FaUser className="text-md inline-block" />
         <Link to="news/category" className="">
-          কৃষি কন্ঠ প্রতিবেদক
+          {news?.author?.name}
         </Link>
       </div>
       <div className="flex gap-2">

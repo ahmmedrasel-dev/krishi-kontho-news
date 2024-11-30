@@ -18,10 +18,10 @@ const LeadNews = ({ leadNews }) => {
         </div>
         <div className="desktop:w-[40%] w-full">
           <h2 className="text-3xl text-title-color font-semibold transition-all ease-in-out hover:text-red-700">
-            {leadNews?.title}
+            {`${leadNews?.title.slice(0, 55)} ...`}
           </h2>
           <p className="mt-2 text-summary-color">
-            {`${leadNews?.content?.slice(3, 145)}...`}
+            {`${leadNews?.summary?.slice(0, 140)}...`}
           </p>
         </div>
       </Link>

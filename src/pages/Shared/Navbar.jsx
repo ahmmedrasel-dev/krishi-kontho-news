@@ -76,11 +76,13 @@ const Navbar = () => {
           <NavLink href="/" className="navbar font-semibold text-navlink-color">
             জাতীয়
           </NavLink>
-          <NavLink href="/" className="navbar font-semibold text-navlink-color">
-            রাজনীতি
-          </NavLink>
+
           <NavLink href="/" className="navbar font-semibold text-navlink-color">
             সারাদেশ
+          </NavLink>
+
+          <NavLink href="/" className="navbar font-semibold text-navlink-color">
+            কৃষি
           </NavLink>
           <NavLink href="/" className="navbar font-semibold text-navlink-color">
             বিশ্ব
@@ -102,9 +104,6 @@ const Navbar = () => {
           </NavLink>
           <NavLink href="/" className="navbar font-semibold text-navlink-color">
             তথ্য
-          </NavLink>
-          <NavLink href="/" className="navbar font-semibold text-navlink-color">
-            অভিজ্ঞতা
           </NavLink>
         </nav>
       </div>
