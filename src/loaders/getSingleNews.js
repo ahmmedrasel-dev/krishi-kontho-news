@@ -14,6 +14,6 @@ export async function getSingleNewsLoader({ params }) {
     return { singleNews, latestNews };
   } catch (error) {
     console.error("Error fetching news:", error);
-    throw error; // Re-throw the error to handle it in the caller
+    throw error;
   }
 }

@@ -15,6 +15,6 @@ export async function getNewsLoader() {
     return { featuredNews, leadSecNews };
   } catch (error) {
     console.error("Error fetching news:", error);
-    throw error; // Re-throw the error to handle it in the caller
+    throw error;
   }
 }
