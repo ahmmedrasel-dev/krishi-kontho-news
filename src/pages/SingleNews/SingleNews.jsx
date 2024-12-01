@@ -16,38 +16,31 @@ import Breadcrum from "../../components/Breadcrum";
 import SingleNewsRightSide from "./SingleNewsRightSide";
 
 const SingleNews = () => {
-  const { singleNews, latestNews } = useLoaderData();
-  const relatedNews = latestNews.filter(
-    (item) =>
-      item.categories[0].id === singleNews.categories[0].id &&
-      item.id !== singleNews.id
-  );
-  const filterLatest = latestNews.filter((item) => item.id !== singleNews.id);
+  const { singleNews, latestNews, relatedNews } = useLoaderData();
 
+  const filterLatest = latestNews.filter((item) => item.id !== singleNews.id);
+  console.log(relatedNews);
   return (
     <>
       <Helmet>
-        {/* Basic Meta Tags */}
         <title>{singleNews?.title}</title>
-        <head>
-          <meta name="description" content={singleNews?.summary} />
+        <meta name="description" content={singleNews?.summary} />
 
-          {/* Open Graph / Facebook Meta Tags */}
-          <meta property="og:title" content={singleNews?.title} />
-          <meta property="og:description" content={singleNews?.summary} />
-          <meta property="og:image" content={singleNews?.thumbnail} />
-          <meta
-            property="og:url"
-            content={`https://krishikantho.com/news/${singleNews?.slug}`}
-          />
-          <meta property="og:type" content="article" />
+        {/* Open Graph / Facebook Meta Tags */}
+        <meta property="og:title" content={singleNews?.title} />
+        <meta property="og:description" content={singleNews?.summary} />
+        <meta property="og:image" content={singleNews?.thumbnail} />
+        <meta
+          property="og:url"
+          content={`https://krishikantho.com/news/${singleNews?.slug}`}
+        />
+        <meta property="og:type" content="article" />
 
-          {/* Twitter Meta Tags (Optional) */}
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content={singleNews.title} />
-          <meta name="twitter:description" content={singleNews?.summary} />
-          <meta name="twitter:image" content={singleNews?.thumbnail} />
-        </head>
+        {/* Twitter Meta Tags (Optional) */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={singleNews.title} />
+        <meta name="twitter:description" content={singleNews?.summary} />
+        <meta name="twitter:image" content={singleNews?.thumbnail} />
       </Helmet>
       <section className="container my-4">
         <div className="grid desktop:grid-cols-5 grid-cols-1 space-x-3">
@@ -62,7 +55,7 @@ const SingleNews = () => {
             </div>
             {/* Category News */}
             <div className="hidden desktop:grid grid-cols-1 border rounded p-2">
-              {relatedNews.slice(0, 5).map((item, index) => (
+              {relatedNews?.map((item, index) => (
                 <Link to={`/news/${item?.slug}`} key={item?.id}>
                   <div
                     className={`${index === 0 ? "" : "border-b"} my-3`}

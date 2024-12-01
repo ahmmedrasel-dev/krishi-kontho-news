@@ -11,7 +11,11 @@ export async function getSingleNewsLoader({ params }) {
       `${import.meta.env.VITE_SERVER_URL}/news/${params.slug}`
     );
 
-    return { singleNews, latestNews };
+    const { data: relatedNews } = await axiosPrivate.get(
+      `${import.meta.env.VITE_SERVER_URL}/related_news/${params.slug}`
+    );
+
+    return { singleNews, latestNews, relatedNews };
   } catch (error) {
     console.error("Error fetching news:", error);
     throw error;

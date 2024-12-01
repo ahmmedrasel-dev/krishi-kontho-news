@@ -9,7 +9,12 @@ const Breadcrum = ({ news }) => {
       <div className="flex items-center gap-2 mb-2">
         <FaHome className="text-xl inline-block" /> /{" "}
         <Link to="news/category" className="text-lg text-red-700 font-semibold">
-          {news?.categories[0].name}
+          {news?.categories?.map((category, index) => (
+            <span key={index}>
+              {category.name}
+              {index < news.categories.length - 1 && ", "}
+            </span>
+          )) || "No Categories"}
         </Link>
       </div>
       <div className="flex items-center gap-2 mb-2">

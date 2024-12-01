@@ -1,14 +1,15 @@
 import React from "react";
 import LeadSection from "../Sections/LeadSection";
 import NationalSection from "../Sections/NationalSection";
-import VideoGallerySection from "../Sections/VideoGallerySection";
+import SaradeshSection from "../Sections/SaradeshSection";
 
 const Home = () => {
   return (
     <div className="container">
       <LeadSection />
-      <VideoGallerySection />
+      {/* <VideoGallerySection /> */}
       <NationalSection />
+      <SaradeshSection />
     </div>
   );
 };
