@@ -13,7 +13,7 @@ const NationalSection = () => {
 
           <div className="grid grid-col-1 desktop:grid-cols-3 space-x-4">
             <div className="grid grid-cols-1">
-              <Link to="/news/12e3123">
+              <Link to={`/news/${sectionMainNews?.slug}`}>
                 <div className="relative overflow-hidden">
                   <img
                     src={sectionMainNews?.thumbnail}
