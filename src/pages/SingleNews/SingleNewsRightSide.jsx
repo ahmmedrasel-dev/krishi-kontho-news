@@ -28,7 +28,7 @@ const SingleNewsRightSide = ({ latestNews }) => {
 
       {isLatest ? (
         <div>
-          {latestNews?.map((item, index) => (
+          {latestNews.slice(0, 10)?.map((item, index) => (
             <Link to={`/news/${item?.slug}`} key={item?.id}>
               {index !== 0 && <div className="border-b my-3"></div>}
               <div className="flex my-4 relative">

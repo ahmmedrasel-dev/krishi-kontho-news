@@ -9,15 +9,13 @@ import LeadSectionRightNews from "../NewsComponent/LeadSectionRightNews";
 import LeadSidebar from "../NewsComponent/LeadSidebar";
 
 const LeadSection = () => {
-  const data = useLoaderData();
-  const [leadNews, setLeadNews] = useState(data.featuredNews);
-  const [leadSecNews, setLeadSecNews] = useState(data.leadSecNews);
+  const { featuredNews, leadSecNews } = useLoaderData();
 
   return (
     <section className="mt-4">
       <div className="grid grid-cols-1 desktop:grid-cols-4 gap-4">
         <div className="desktop:col-span-2 px-4 desktop:px-0">
-          <LeadNews leadNews={leadNews} />
+          <LeadNews leadNews={featuredNews} />
 
           <div className="bg-white border rounded p-2 mt-2">
             <div className="grid desktop:grid-cols-3 grid-cols-1 desktop:space-x-4 space-y-4 desktop:space-y-0">

@@ -8,15 +8,13 @@ import {
   FaVideo,
 } from "react-icons/fa";
 import { FiArrowRightCircle } from "react-icons/fi";
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import "swiper/css";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { getVideo } from "../../data/news";
-import { getUrl } from "../../utills/utility";
 
 const VideoGallerySection = () => {
-  const videos = getVideo();
+  const { videoNews } = useLoaderData();
   const prevRef = useRef(null);
   const nextRef = useRef(null);
 
@@ -73,17 +71,17 @@ const VideoGallerySection = () => {
           modules={[Navigation]}
           spaceBetween={20}
         >
-          {videos.map((item) => (
+          {videoNews.map((item) => (
             <SwiperSlide key={item.id}>
               <a
                 key={item.id}
-                href={item.videoUrl}
+                href={item.youtube_link}
                 className="glightbox"
                 data-gallery="gallery"
               >
                 <div className="relative overflow-hidden">
                   <img
-                    src={getUrl(item.thumbnail)}
+                    src={item.thumbnail}
                     alt={item.title}
                     className="transition-transform duration-300 ease-in-out transform hover:scale-105 hover:opacity-90"
                   />

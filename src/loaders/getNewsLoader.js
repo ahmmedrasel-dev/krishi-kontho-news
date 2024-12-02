@@ -21,7 +21,12 @@ export async function getNewsLoader() {
       `${import.meta.env.VITE_SERVER_URL}/lead_section_news`
     );
 
-    return { featuredNews, leadSecNews, nationalNews, saradeshNews };
+    // Fetch video section news
+    const { data: videoNews } = await axiosPrivate.get(
+      `${import.meta.env.VITE_SERVER_URL}/videos`
+    );
+
+    return { featuredNews, leadSecNews, nationalNews, saradeshNews, videoNews };
   } catch (error) {
     console.error("Error fetching news:", error);
     throw error;
