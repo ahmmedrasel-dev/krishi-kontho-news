@@ -5,10 +5,10 @@ import { FaChevronLeft, FaChevronRight, FaPlayCircle } from "react-icons/fa";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
-import { getVideo } from "../../data/news";
 import { getUrl } from "../../utills/utility";
+import { useLoaderData } from "react-router-dom";
 const VideoPlayer = () => {
-  const videos = getVideo();
+  const { videoNews } = useLoaderData();
   const prevRef = useRef(null);
   const nextRef = useRef(null);
 
@@ -39,17 +39,17 @@ const VideoPlayer = () => {
         modules={[Navigation]}
         slidesPerView={1}
       >
-        {videos.map((item, index) => (
+        {videoNews.map((item, index) => (
           <SwiperSlide key={index}>
             <a
               key={item.id}
-              href={item.videoUrl}
+              href={item.youtube_link}
               className="glightbox"
               data-gallery="gallery"
             >
               <div className="relative overflow-hidden">
                 <img
-                  src={getUrl(item.thumbnail)}
+                  src={item.thumbnail}
                   alt={item.title}
                   className="transition-transform duration-300 ease-in-out transform hover:scale-105 hover:opacity-90"
                 />
@@ -59,9 +59,6 @@ const VideoPlayer = () => {
                 {item.title}
               </h4>
             </a>
-            {/* <div>
-              <ReactPlayer url={video.url} height={400} />
-            </div> */}
           </SwiperSlide>
         ))}
       </Swiper>
